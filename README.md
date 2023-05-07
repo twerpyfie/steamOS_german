@@ -7,4 +7,4 @@ Usage:
 ```git clone https://github.com/twerpyfie/steamOS_german.git
 cd steamOS_german
 sudo chmod +x ./steamOS_ger_setup
-sudo bash ./steamOS_ger_setup```
+sudo bash ./steamOS_ger_setup
