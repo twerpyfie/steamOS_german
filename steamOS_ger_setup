@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Disable Read-Only mode
+sudo steamos-readonly disable
+
+# Init Pacman Keys initialsieren
+sudo pacman-key --init
+sudo pacman-key --populate
+sudo pacman-key --refresh-keys
+
+# locale.gen editieren
+echo "de_DE.UTF-8 UTF-8" >> /etc/locale.gen
+
+# glibc updaten
+sudo pacman -S glibc
+
+# loclaes generieren
+sudo locale-gen
+
+# i18n package für kde installieren
+sudo pacman -S ki18n
+
+# plasma erneut installieren
+sudo pacman -S plasma
+
+# deutsche korrektur installieren
+sudo pacman -S aspell-de
+
+ # alle pakete neu installieren
+sudo pacman -Qqn | sudo pacman -S -
+
+# jetzt manuell die sprache ändern.
